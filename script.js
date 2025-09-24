@@ -449,7 +449,7 @@ function setupExport(){
   bar.style.textAlign = 'center';
   bar.style.marginTop = '10px';
   const btn = document.createElement('button');
-  btn.className = 'btn btn-ghost';
+  btn.className = 'btn btn-ghost btn-pulse';
   btn.textContent = 'Descargar Excel participantes';
   btn.addEventListener('click', exportarExcel);
   qs('#puntajes .container').appendChild(bar).appendChild(btn);
@@ -512,6 +512,14 @@ function setupParallaxCards(){
 // Pulso en CTAs principales
 function highlightCTAs(){
   qsa('.hero-cta .btn').forEach(btn=> btn.classList.add('btn-pulse'));
+  const calc = qs('#btnCalcularPodio');
+  if(calc) calc.classList.add('btn-pulse');
+  // también el botón de exportar si ya existe
+  qsa('#puntajes .container .btn').forEach(b=>{
+    if(b.textContent && b.textContent.toLowerCase().includes('excel')){
+      b.classList.add('btn-pulse');
+    }
+  });
 }
 
 

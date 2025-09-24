@@ -149,6 +149,7 @@ input:focus,select:focus{outline:2px solid #b6d2ff;border-color:#b6d2ff}
 .vine:after{width:26px;height:26px;right:8px;bottom:-10px}
 @keyframes blink{0%,100%{opacity:.2}50%{opacity:.7}}
 
+
 /* Avatar flotante eliminado */
 .avatar-floating{display:none}
 
