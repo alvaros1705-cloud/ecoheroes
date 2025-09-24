@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Third School: ECO-HÉROES — Transformando Residuos</title>
+    <meta name="description" content="Evento ECO-HÉROES: Transformando Residuos. Inscríbete, consulta puntajes, podio y chatbot informativo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagen 5. avatar.png">
+</head>
+<body>
+    
+
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="usb-brand">
+                <img src="imagen 2. logo usb.png" alt="Universidad Simón Bolívar" class="usb-logo">
+                <div class="brand-text">
+                    <h1>Universidad Simón Bolívar</h1>
+                    <p>Third School: ECO-HÉROES — Transformando Residuos</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="#eco-heroes">Evento</a>
+                <a href="#inscripcion">Inscripción</a>
+                <a href="#puntajes">Puntajes</a>
+                <a href="#podio">Podio</a>
+                <a href="#patrocinadores">Programas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero ECO-HÉROES -->
+        <section id="eco-heroes" class="hero">
+            <div class="container hero-grid reveal">
+                <div class="hero-copy">
+                    <h2>ECO-HÉROES: Transformando Residuos</h2>
+                    <ul class="hero-bullets">
+                        <li>Estudiantes de grado 10 u 11 y SENA</li>
+                        <li>30 de octubre — 7:30 a. m. a 12:00 m.</li>
+                        <li>Forma tu equipo y participa</li>
+                    </ul>
+                    <div class="hero-cta">
+                        <a class="btn btn-primary vine" href="#inscripcion">Inscribir equipo</a>
+                        <a class="btn btn-ghost" href="#puntajes">Ver puntajes</a>
+                    </div>
+                    <div class="contact">
+                        <span>Contacto: 3125508421 · leydi.martinezb@unisimon.edu.co</span>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="imagen 3. eco-heroes.jpg" alt="Información del evento y QR" class="poster"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inscripción -->
+        <section id="inscripcion" class="section">
+            <div class="container section-header insc-header">
+                <img src="imagen 4.png" alt="Planeta con ramas y mariposas" class="planet-insc"/>
+                <div class="insc-text">
+                    <h3>Inscripción de equipos</h3>
+                    <p>Registra tu equipo para participar en ECO-HÉROES.</p>
+                </div>
+            </div>
+            <div class="container grid-2 reveal">
+                <form id="formRegistro" class="card form" novalidate>
+                    <div class="form-row">
+                        <label for="equipo">Nombre del equipo *</label>
+                        <input id="equipo" name="equipo" type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="institucion">Institución (colegio/universidad) *</label>
+                        <input id="institucion" name="institucion" type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="grado">Grado *</label>
+                        <select id="grado" name="grado" required>
+                            <option value="">Selecciona</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>SENA</option>
+                        </select>
+                    </div>
+                    <div class="form-row grid-2-inner">
+                        <div>
+                            <label for="contactoNombre">Nombre del Docente *</label>
+                            <input id="contactoNombre" name="contactoNombre" type="text" required>
+                        </div>
+                        <div>
+                            <label for="contactoTelefono">Celular *</label>
+                            <input id="contactoTelefono" name="contactoTelefono" type="tel" required pattern="[0-9]{7,12}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactoEmail">E-mail Docente *</label>
+                        <input id="contactoEmail" name="contactoEmail" type="email" required>
+                    </div>
+                    <div class="form-actions">
+                        <div class="form-row" style="flex:1">
+                            <label class="consent">
+                                <input id="politicaDatos" type="checkbox" required>
+                                <span>Lo invitamos a conocer nuestra Política de Tratamiento de la Información Personal en <a href="https://www.unisimon.edu.co/showimagen/showpdf/universidad-simon-bolivar-97552.pdf" target="_blank" rel="noopener">este enlace</a>.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary vine">Registrar equipo</button>
+                        <button type="button" id="btnLimpiar" class="btn btn-ghost">Limpiar</button>
+                    </div>
+                    <p class="form-hint">Los campos marcados con * son obligatorios.</p>
+                </form>
+                <form id="formParticipantes" class="card form" novalidate>
+                    <h4>Inscripción de participantes por equipo</h4>
+                    <div class="participant">
+                        <h5>Participante 1</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p1Nombre">Nombres y Apellidos</label>
+                                <input id="p1Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p1Cel">Celular</label>
+                                <input id="p1Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p1Mail">E-mail (opcional)</label>
+                            <input id="p1Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <h5>Participante 2</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p2Nombre">Nombres y Apellidos</label>
+                                <input id="p2Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p2Cel">Celular</label>
+                                <input id="p2Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p2Mail">E-mail (opcional)</label>
+                            <input id="p2Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <h5>Participante 3</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p3Nombre">Nombres y Apellidos</label>
+                                <input id="p3Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p3Cel">Celular</label>
+                                <input id="p3Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p3Mail">E-mail (opcional)</label>
+                            <input id="p3Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <p class="form-hint">Los campos de participantes se habilitarán al iniciar la inscripción del equipo.</p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Nueva sección: Inscripción por QR -->
+        <section id="inscripcion-qr" class="section">
+            <div class="container section-header">
+                <h3>Inscripción por QR</h3>
+                <p>Escanea el QR para inscribirte desde tu dispositivo móvil.</p>
+            </div>
+            <div class="container">
+                <div class="card qr-card" style="text-align:center">
+                    <img src="imagen 6.jpg" alt="QR de inscripción" class="qr-preview">
+                </div>
+            </div>
+        </section>
+
+        <!-- Puntajes -->
+        <section id="puntajes" class="section alt">
+            <img src="imagen 5. avatar.png" alt="Avatar Eco-Héroes" class="section-avatar avatar-right avatar-animated"/>
+            <div class="container section-header">
+                <h3>Puntuación de equipos</h3>
+                <p>Registra y edita los puntajes. Se actualizarán en tiempo real.</p>
+            </div>
+            <div class="container reveal">
+                <div class="card score-controls">
+                    <div class="form-row grid-4-inner">
+                        <div>
+                            <label for="equipoScore">Equipo</label>
+                            <select id="equipoScore"></select>
+                        </div>
+                        <div>
+                            <label for="ronda">Jurado</label>
+                            <select id="ronda">
+                                <option>Elije jurado</option>
+                                <option>Jurado 1</option>
+                                <option>Jurado 2</option>
+                                <option>Jurado 3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="puntaje">Puntaje</label>
+                            <input id="puntaje" type="number" min="0" max="100" step="1" value="0">
+                        </div>
+                        <div class="form-actions-inline">
+                            <button id="btnAgregarPuntaje" class="btn btn-primary vine" type="button">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="juror-status" id="jurorStatus" aria-live="polite"></div>
+                </div>
+
+                <div class="card table-wrap">
+                    <table class="table" id="tablaPuntajes" aria-describedby="tabla de puntajes">
+                        <thead>
+                            <tr>
+                                <th>Equipo</th>
+                                <th>Institución</th>
+                                <th>J1</th>
+                                <th>J2</th>
+                                <th>J3</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div style="text-align:center;margin-top:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+                    <button id="btnLimpiarTablas" class="btn btn-ghost">Limpiar tabla y podio</button>
+                    <button id="btnResetTodo" class="btn btn-ghost">Limpiar todo (formularios y puntajes)</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Podio -->
+        <section id="podio" class="section">
+            <img src="imagen 5. avatar.png" alt="Avatar Eco-Héroes" class="section-avatar avatar-left avatar-animated"/>
+            <div class="container section-header">
+                <h3>Podio de ganadores</h3>
+                <p>Se calcula automáticamente a partir de los puntajes.</p>
+                <button id="btnCalcularPodio" class="btn btn-primary vine">Calcular ganadores</button>
+            </div>
+            <div class="container podium reveal">
+                <div class="podium-spot spot-2">
+                    <div class="place">2</div>
+                    <div class="team" id="ganador2">—</div>
+                </div>
+                <div class="podium-spot spot-1">
+                    <div class="place">1</div>
+                    <div class="team" id="ganador1">—</div>
+                </div>
+                <div class="podium-spot spot-3">
+                    <div class="place">3</div>
+                    <div class="team" id="ganador3">—</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Patrocinadores / Programas -->
+        <section id="patrocinadores" class="section alt">
+            <div class="container section-header">
+                <h3>Programas y patrocinadores</h3>
+            </div>
+            <div class="container sponsors reveal">
+                <div class="sponsor card">
+                    <h4>PROGRAMA INGENIERÍA MECÁNICA</h4>
+                    <img src="imagen 8.png" alt="Logo patrocinador Ingeniería Mecánica" class="sponsor-logo">
+                    <a class="btn btn-ghost vine" href="https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-mecanica/cucuta" target="_blank" rel="noopener">Conocer programa</a>
+                </div>
+                <div class="sponsor card">
+                    <h4>PROGRAMA INGENIERÍA DE SISTEMAS</h4>
+                    <img src="imagen 7.png" alt="Logo patrocinador Ingeniería de Sistemas" class="sponsor-logo">
+                    <a class="btn btn-ghost vine" href="https://www.unisimon.edu.co/cucuta/pregrados/ingenieria-de-sistemas/cucuta" target="_blank" rel="noopener">Conocer programa</a>
+                </div>
+                <div class="vines-bg" aria-hidden="true"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Universidad Simón Bolívar</strong>
+                <div>Third School: ECO-HÉROES — Transformando Residuos</div>
+            </div>
+            <div>
+                <span>Contacto: 3125508421</span>
+                <span> · </span>
+                <a href="mailto:leydi.martinezb@unisimon.edu.co">leydi.martinezb@unisimon.edu.co</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Abrir chatbot">
+        <img src="imagen 5. avatar.png" alt="Chatbot Eco-Héroes">
+    </button>
+    <div class="chatbot" id="chatbot" aria-live="polite" aria-label="Chatbot del evento">
+        <div class="chatbot-header">
+            <img src="imagen 5. avatar.png" alt="Avatar"/>
+            <div>
+                <strong>EcoBot</strong>
+                <div>Asistente del evento ECO-HÉROES</div>
+            </div>
+            <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar">×</button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages"></div>
+        <form class="chatbot-input" id="chatForm">
+            <input id="chatText" type="text" placeholder="Pregúntame sobre el evento..." autocomplete="off" />
+            <button class="btn btn-primary" type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Modal de clave para jurados -->
+    <div id="jurorModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" id="jurorModalBackdrop"></div>
+        <div class="modal-dialog" role="document">
+            <div class="modal-header">
+                <h4 id="jurorModalTitle">Autenticación de jurado</h4>
+                <button class="modal-close" id="jurorModalClose" aria-label="Cerrar">×</button>
+            </div>
+            <div class="modal-body">
+                <p id="jurorModalText">Ingrese la clave para continuar.</p>
+                <div class="modal-input-wrap">
+                    <input id="jurorPassword" type="password" placeholder="Clave" />
+                    <button id="togglePass" class="modal-eye" type="button" aria-label="Mostrar contraseña" title="Mostrar/Ocultar">
+                        <svg class="icon-eye" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12c3.2-5 8-7 10-7s6.8 2 10 7c-3.2 5-8 7-10 7s-6.8-2-10-7z" stroke="#6c87a6" stroke-width="1.6" fill="none"/>
+                            <circle cx="12" cy="12" r="3.5" stroke="#6c87a6" stroke-width="1.6" fill="none"/>
+                            <path d="M6 8c.6-.5 1.2-1 2-1.4M18 8c-.6-.5-1.2-1-2-1.4" stroke="#6c87a6" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                        <svg class="icon-eye-off" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 12c3.2-5 8-7 10-7s6.8 2 10 7c-3.2 5-8 7-10 7s-6.8-2-10-7z" stroke="#6c87a6" stroke-width="1.6" fill="none"/>
+                            <path d="M4 4l16 16" stroke="#6c87a6" stroke-width="1.6" stroke-linecap="round"/>
+                            <path d="M9 9a4 4 0 105.66 5.66" stroke="#6c87a6" stroke-width="1.6" fill="none"/>
+                            <path d="M6 8c.6-.5 1.2-1 2-1.4M18 8c-.6-.5-1.2-1-2-1.4" stroke="#6c87a6" stroke-width="1.6" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-ghost" id="jurorCancel">Cancelar</button>
+                <button class="btn btn-primary" id="jurorOk">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SheetJS para exportar a Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-vWQXK2v3G2D0h2cYQ8oerZ1hVjVb1K1McYH8EwVv1s8oSZY3/2y2W3R2VgqB7r3lfa1x9z2j5mC9n0VQqf5x1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Firebase opcional (rellenar config en script.js si se desea) -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script> -->
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
