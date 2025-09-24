@@ -470,6 +470,8 @@ window.addEventListener('DOMContentLoaded', ()=>{
   refreshTablaPuntajes();
   calcularPodio();
   setupReveals();
+  setupParallaxCards();
+  highlightCTAs();
 });
 
 // Scroll reveal simple
@@ -487,6 +489,29 @@ function setupReveals(){
   // pulso flash a los CTA del hero
   const heroCta = qsa('.hero-cta .btn.btn-primary');
   heroCta.forEach(b=> b.classList.add('flash'));
+}
+
+// Parallax sutil en tarjetas al mover el mouse
+function setupParallaxCards(){
+  const cards = qsa('.card');
+  cards.forEach(card=>{
+    card.classList.add('parallax');
+    card.addEventListener('mousemove', (e)=>{
+      const r = card.getBoundingClientRect();
+      const cx = e.clientX - r.left; const cy = e.clientY - r.top;
+      const rx = ((cy/r.height)-0.5)*-6; // inclinación
+      const ry = ((cx/r.width)-0.5)*6;
+      card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg)`;
+    });
+    card.addEventListener('mouseleave', ()=>{
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  });
+}
+
+// Pulso en CTAs principales
+function highlightCTAs(){
+  qsa('.hero-cta .btn').forEach(btn=> btn.classList.add('btn-pulse'));
 }
 
 

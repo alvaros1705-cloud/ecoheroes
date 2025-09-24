@@ -74,6 +74,7 @@ body{
 .grid-4-inner{display:grid;grid-template-columns:1.3fr .9fr .8fr .6fr;gap:12px}
 
 .card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:16px}
+.card.parallax{will-change:transform;transition:transform .15s ease, box-shadow .2s ease}
 
 .form .form-row{margin-bottom:12px}
 label{display:block;font-weight:600;margin-bottom:6px}
@@ -111,7 +112,9 @@ input:focus,select:focus{outline:2px solid #b6d2ff;border-color:#b6d2ff}
 @keyframes shimmer{0%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
 @keyframes pulseFlash{0%,100%{box-shadow:0 0 0 0 rgba(29,185,84,.0)}50%{box-shadow:0 0 0 8px rgba(29,185,84,.16)}}
 .btn.btn-primary,.btn.btn-ghost{position:relative;overflow:hidden}
-.btn.btn-primary:before,.btn.btn-ghost:before{content:"";position:absolute;top:0;bottom:0;width:40%;left:-120%;background:linear-gradient(75deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,.45) 50%, rgba(255,255,255,.0) 100%);transform:skewX(-20deg);animation:shimmer 3.5s ease-in-out infinite}
+.btn.btn-primary:before,.btn.btn-ghost:before{content:"";position:absolute;top:0;bottom:0;width:40%;left:-120%;background:linear-gradient(75deg, rgba(255,255,255,.0) 0%, rgba(255,255,255,.6) 50%, rgba(255,255,255,.0) 100%);transform:skewX(-20deg);animation:shimmer 3s ease-in-out infinite}
+.btn:after{content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;background:rgba(255,255,255,.6);border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0;pointer-events:none}
+.btn:active:after{animation:ripple .5s ease-out}
 .btn.flash{animation:pulseFlash 2.6s ease-in-out 2}
 .card:hover{transform:translateY(-3px);transition:transform .2s ease, box-shadow .2s ease;box-shadow:0 16px 34px rgba(10,91,211,.18)}
 
@@ -121,11 +124,23 @@ input:focus,select:focus{outline:2px solid #b6d2ff;border-color:#b6d2ff}
 .site-footer{padding:18px 0;border-top:1px solid #e6eef9;background:#ffffff}
 .footer-inner{display:flex;align-items:center;justify-content:space-between}
 
-.btn{appearance:none;border:none;border-radius:999px;padding:10px 16px;font-weight:600;cursor:pointer;transition:transform .06s ease, box-shadow .2s ease}
-.btn-primary{background:var(--green);color:#fff;box-shadow:0 6px 16px rgba(29,185,84,.35)}
-.btn-primary:hover{background:#19a54a}
-.btn-ghost{background:#ffffff;color:var(--blue);border:1px solid #d7e3f4;font-weight:600}
+.btn{appearance:none;border:none;border-radius:999px;padding:10px 16px;font-weight:600;cursor:pointer;transition:transform .06s ease, box-shadow .25s ease, filter .25s ease;position:relative;overflow:hidden}
+.btn-primary{color:#fff;box-shadow:0 8px 18px rgba(29,185,84,.35);
+  background:linear-gradient(135deg,#16a24c 0%, #1db954 30%, #20d86a 60%, #16a24c 100%);
+  background-size:200% 200%;
+  animation:gradientShift 6s ease-in-out infinite;
+}
+.btn-primary:hover{filter:brightness(1.06);box-shadow:0 14px 30px rgba(29,185,84,.45)}
+.btn-ghost{background:#ffffff;color:var(--blue);border:2px solid transparent;font-weight:600;
+  background-image:linear-gradient(#fff,#fff),
+   linear-gradient(135deg,#0a5bd3,#1db954);
+  background-origin:border-box;background-clip:padding-box,border-box;
+  animation:borderGlow 4s linear infinite;
+}
 .btn:active{transform:translateY(1px)}
+
+/* Pulso continuo para CTA principales */
+.btn-pulse{animation:pulseGlow 2.8s ease-in-out infinite}
 
 /* Botón orgánico con enredaderas */
 .vine{position:relative;overflow:hidden}
@@ -171,6 +186,12 @@ input:focus,select:focus{outline:2px solid #b6d2ff;border-color:#b6d2ff}
 /* Estado de jurado autenticado */
 .juror-status{margin-top:8px;font-size:12px;color:var(--muted)}
 .juror-status.ok{color:var(--green-dark)}
+
+/* Animaciones extra */
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+@keyframes borderGlow{0%{filter:drop-shadow(0 0 0 rgba(29,185,84,.0))}50%{filter:drop-shadow(0 0 8px rgba(10,91,211,.25))}100%{filter:drop-shadow(0 0 0 rgba(29,185,84,.0))}}
+@keyframes ripple{0%{transform:translate(-50%,-50%) scale(0);opacity:.5}100%{transform:translate(-50%,-50%) scale(16);opacity:0}}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(29,185,84,.0)}50%{box-shadow:0 0 0 14px rgba(29,185,84,.14)}}
 
 /* Responsivo */
 @media (max-width: 920px){
