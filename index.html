@@ -23,252 +23,43 @@
                     <p>Third School: ECO-HÉROES — Transformando Residuos</p>
                 </div>
             </div>
-            <nav class="main-nav" aria-label="Navegación principal">
-                <a href="#eco-heroes">Evento</a>
-                <a href="#inscripcion">Inscripción</a>
-                <a href="#puntajes">Puntajes</a>
-                <a href="#podio">Podio</a>
-                <a href="#patrocinadores">Programas</a>
-            </nav>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="evento.html" title="Se abre en la misma pestaña" aria-label="Evento">Evento</a>
+            <a href="inscripcion.html" title="Se abre en la misma pestaña" aria-label="Inscripción">Inscripción</a>
+            <a href="puntajes.html" title="Se abre en la misma pestaña" aria-label="Puntajes">Puntajes</a>
+            <a href="podio.html" title="Se abre en la misma pestaña" aria-label="Podio">Podio</a>
+            <a href="programas.html" title="Se abre en la misma pestaña" aria-label="Programas">Programas</a>
+        </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero ECO-HÉROES -->
         <section id="eco-heroes" class="hero">
-            <div class="container hero-grid reveal">
+            <div class="container hero-grid">
                 <div class="hero-copy">
                     <h2>ECO-HÉROES: Transformando Residuos</h2>
-                    <ul class="hero-bullets">
-                        <li>Estudiantes de grado 10 u 11 y SENA</li>
-                        <li>30 de octubre — 7:30 a. m. a 12:00 m.</li>
-                        <li>Forma tu equipo y participa</li>
+                    
                     </ul>
-                    <div class="hero-cta">
-                        <a class="btn btn-primary vine" href="#inscripcion">Inscribir equipo</a>
-                        <a class="btn btn-ghost" href="#puntajes">Ver puntajes</a>
+                    <div class="hero-avatar-section">
+                        <img id="avatar-5" src="imagen 5. avatar.png" alt="Avatar oficial ECO-HÉROES" class="main-avatar"/>
                     </div>
-                    <div class="contact">
-                        <span>Contacto: 3125508421 · leydi.martinezb@unisimon.edu.co</span>
-                    </div>
+                    
                 </div>
                 <div class="hero-media">
-                    <img src="imagen 3. eco-heroes.jpg" alt="Información del evento y QR" class="poster"/>
+                    <img src="imagen 3. eco-heroes.jpg" alt="Información del evento y QR" class="poster eco-poster"/>
                 </div>
             </div>
         </section>
 
-        <!-- Inscripción -->
-        <section id="inscripcion" class="section">
-            <div class="container section-header insc-header">
-                <img src="imagen 4.png" alt="Planeta con ramas y mariposas" class="planet-insc"/>
-                <div class="insc-text">
-                    <h3>Inscripción de equipos</h3>
-                    <p>Registra tu equipo para participar en ECO-HÉROES.</p>
-                </div>
-            </div>
-            <div class="container grid-2 reveal">
-                <form id="formRegistro" class="card form" novalidate>
-                    <div class="form-row">
-                        <label for="equipo">Nombre del equipo *</label>
-                        <input id="equipo" name="equipo" type="text" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="institucion">Institución (colegio/universidad) *</label>
-                        <input id="institucion" name="institucion" type="text" required>
-                    </div>
-                    <div class="form-row">
-                        <label for="grado">Grado *</label>
-                        <select id="grado" name="grado" required>
-                            <option value="">Selecciona</option>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>SENA</option>
-                        </select>
-                    </div>
-                    <div class="form-row grid-2-inner">
-                        <div>
-                            <label for="contactoNombre">Nombre del Docente *</label>
-                            <input id="contactoNombre" name="contactoNombre" type="text" required>
-                        </div>
-                        <div>
-                            <label for="contactoTelefono">Celular *</label>
-                            <input id="contactoTelefono" name="contactoTelefono" type="tel" required pattern="[0-9]{7,12}">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <label for="contactoEmail">E-mail Docente *</label>
-                        <input id="contactoEmail" name="contactoEmail" type="email" required>
-                    </div>
-                    <div class="form-actions">
-                        <div class="form-row" style="flex:1">
-                            <label class="consent">
-                                <input id="politicaDatos" type="checkbox" required>
-                                <span>Lo invitamos a conocer nuestra Política de Tratamiento de la Información Personal en <a href="https://www.unisimon.edu.co/showimagen/showpdf/universidad-simon-bolivar-97552.pdf" target="_blank" rel="noopener">este enlace</a>.</span>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary vine">Registrar equipo</button>
-                        <button type="button" id="btnLimpiar" class="btn btn-ghost">Limpiar</button>
-                    </div>
-                    <p class="form-hint">Los campos marcados con * son obligatorios.</p>
-                </form>
-                <form id="formParticipantes" class="card form" novalidate>
-                    <h4>Inscripción de participantes por equipo</h4>
-                    <div class="participant">
-                        <h5>Participante 1</h5>
-                        <div class="form-row grid-2-inner">
-                            <div>
-                                <label for="p1Nombre">Nombres y Apellidos</label>
-                                <input id="p1Nombre" type="text" disabled>
-                            </div>
-                            <div>
-                                <label for="p1Cel">Celular</label>
-                                <input id="p1Cel" type="tel" pattern="[0-9]{7,12}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <label for="p1Mail">E-mail (opcional)</label>
-                            <input id="p1Mail" type="email" disabled>
-                        </div>
-                    </div>
-                    <div class="participant">
-                        <h5>Participante 2</h5>
-                        <div class="form-row grid-2-inner">
-                            <div>
-                                <label for="p2Nombre">Nombres y Apellidos</label>
-                                <input id="p2Nombre" type="text" disabled>
-                            </div>
-                            <div>
-                                <label for="p2Cel">Celular</label>
-                                <input id="p2Cel" type="tel" pattern="[0-9]{7,12}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <label for="p2Mail">E-mail (opcional)</label>
-                            <input id="p2Mail" type="email" disabled>
-                        </div>
-                    </div>
-                    <div class="participant">
-                        <h5>Participante 3</h5>
-                        <div class="form-row grid-2-inner">
-                            <div>
-                                <label for="p3Nombre">Nombres y Apellidos</label>
-                                <input id="p3Nombre" type="text" disabled>
-                            </div>
-                            <div>
-                                <label for="p3Cel">Celular</label>
-                                <input id="p3Cel" type="tel" pattern="[0-9]{7,12}" disabled>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <label for="p3Mail">E-mail (opcional)</label>
-                            <input id="p3Mail" type="email" disabled>
-                        </div>
-                    </div>
-                    <p class="form-hint">Los campos de participantes se habilitarán al iniciar la inscripción del equipo.</p>
-                </form>
-            </div>
-        </section>
-
-        <!-- Nueva sección: Inscripción por QR -->
-        <section id="inscripcion-qr" class="section">
-            <div class="container section-header">
-                <h3>Inscripción por QR</h3>
-                <p>Escanea el QR para inscribirte desde tu dispositivo móvil.</p>
-            </div>
-            <div class="container">
-                <div class="card qr-card" style="text-align:center">
-                    <img src="imagen 6.jpg" alt="QR de inscripción" class="qr-preview">
-                </div>
-            </div>
-        </section>
-
-        <!-- Puntajes -->
-        <section id="puntajes" class="section alt">
-            <img src="imagen 5. avatar.png" alt="Avatar Eco-Héroes" class="section-avatar avatar-right avatar-animated"/>
-            <div class="container section-header">
-                <h3>Puntuación de equipos</h3>
-                <p>Registra y edita los puntajes. Se actualizarán en tiempo real.</p>
-            </div>
-            <div class="container reveal">
-                <div class="card score-controls">
-                    <div class="form-row grid-4-inner">
-                        <div>
-                            <label for="equipoScore">Equipo</label>
-                            <select id="equipoScore"></select>
-                        </div>
-                        <div>
-                            <label for="ronda">Jurado</label>
-                            <select id="ronda">
-                                <option>Elije jurado</option>
-                                <option>Jurado 1</option>
-                                <option>Jurado 2</option>
-                                <option>Jurado 3</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="puntaje">Puntaje</label>
-                            <input id="puntaje" type="number" min="0" max="100" step="1" value="0">
-                        </div>
-                        <div class="form-actions-inline">
-                            <button id="btnAgregarPuntaje" class="btn btn-primary vine" type="button">Agregar</button>
-                        </div>
-                    </div>
-                    <div class="juror-status" id="jurorStatus" aria-live="polite"></div>
-                </div>
-
-                <div class="card table-wrap">
-                    <table class="table" id="tablaPuntajes" aria-describedby="tabla de puntajes">
-                        <thead>
-                            <tr>
-                                <th>Equipo</th>
-                                <th>Institución</th>
-                                <th>J1</th>
-                                <th>J2</th>
-                                <th>J3</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <div style="text-align:center;margin-top:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-                    <button id="btnLimpiarTablas" class="btn btn-ghost">Limpiar tabla y podio</button>
-                    <button id="btnResetTodo" class="btn btn-ghost">Limpiar todo (formularios y puntajes)</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Podio -->
-        <section id="podio" class="section">
-            <img src="imagen 5. avatar.png" alt="Avatar Eco-Héroes" class="section-avatar avatar-left avatar-animated"/>
-            <div class="container section-header">
-                <h3>Podio de ganadores</h3>
-                <p>Se calcula automáticamente a partir de los puntajes.</p>
-                <button id="btnCalcularPodio" class="btn btn-primary vine">Calcular ganadores</button>
-            </div>
-            <div class="container podium reveal">
-                <div class="podium-spot spot-2">
-                    <div class="place">2</div>
-                    <div class="team" id="ganador2">—</div>
-                </div>
-                <div class="podium-spot spot-1">
-                    <div class="place">1</div>
-                    <div class="team" id="ganador1">—</div>
-                </div>
-                <div class="podium-spot spot-3">
-                    <div class="place">3</div>
-                    <div class="team" id="ganador3">—</div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- Patrocinadores / Programas -->
         <section id="patrocinadores" class="section alt">
             <div class="container section-header">
                 <h3>Programas y patrocinadores</h3>
             </div>
-            <div class="container sponsors reveal">
+            <div class="container sponsors">
                 <div class="sponsor card">
                     <h4>PROGRAMA INGENIERÍA MECÁNICA</h4>
                     <img src="imagen 8.png" alt="Logo patrocinador Ingeniería Mecánica" class="sponsor-logo">

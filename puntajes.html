@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Puntajes — ECO-HÉROES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagen 5. avatar.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="usb-brand">
+                <img src="imagen 2. logo usb.png" alt="Universidad Simón Bolívar" class="usb-logo">
+                <div class="brand-text">
+                    <h1>Universidad Simón Bolívar</h1>
+                    <p>Third School: ECO-HÉROES — Transformando Residuos</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="evento.html">Evento</a>
+                <a href="inscripcion.html">Inscripción</a>
+                <a href="puntajes.html" aria-current="page">Puntajes</a>
+                <a href="podio.html">Podio</a>
+                <a href="programas.html">Programas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2>Puntajes</h2>
+                    <p>Consulta y administra los puntajes de los equipos.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-ghost" href="index.html">Volver a la Landing</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="imagen 5. avatar.png" alt="Avatar" class="poster"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="puntajes">
+            <div class="container section-header">
+                <h3>Puntuación de equipos</h3>
+                <p>Registra y edita los puntajes. Se actualizarán en tiempo real.</p>
+            </div>
+            <div class="container">
+                <div class="card score-controls">
+                    <div class="form-row grid-4-inner">
+                        <div>
+                            <label for="equipoScore">Equipo</label>
+                            <select id="equipoScore">
+                                <option>Elije equipo</option>
+                            </select>
+                            
+                        </div>
+                        <div>
+                            <label for="ronda">Jurado</label>
+                            <select id="ronda">
+                                <option>Elije jurado</option>
+                                <option>Jurado 1</option>
+                                <option>Jurado 2</option>
+                                <option>Jurado 3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="puntaje">Puntaje</label>
+                            <input id="puntaje" type="number" min="0" max="100" step="1" value="0">
+                        </div>
+                        <div class="form-actions-inline">
+                            <button id="btnAgregarPuntaje" class="btn btn-primary vine" type="button">Agregar</button>
+                        </div>
+                    </div>
+                    <div class="juror-status" id="jurorStatus" aria-live="polite"></div>
+                </div>
+
+                <div class="card table-wrap">
+                    <table class="table" id="tablaPuntajes" aria-describedby="tabla de puntajes">
+                        <thead>
+                            <tr>
+                                <th>Equipo</th>
+                                <th>Institución</th>
+                                <th>J1</th>
+                                <th>J2</th>
+                                <th>J3</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div style="text-align:center;margin-top:10px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+                    <button id="btnLimpiarTablas" class="btn btn-ghost">Limpiar tabla y podio</button>
+                    <button id="btnResetTodo" class="btn btn-ghost">Limpiar todo (formularios y puntajes)</button>
+                </div>
+            </div>
+            <div class="nav-steps">
+                <a id="btn-prev" class="btn btn-outline" href="inscripcion.html">« Inscripción</a>
+                <a id="btn-next" class="btn btn-primary" href="podio.html">Siguiente: Podio »</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Universidad Simón Bolívar</strong>
+                <div>Third School: ECO-HÉROES — Transformando Residuos</div>
+            </div>
+            <div>
+                <span>Contacto: 3125508421</span>
+                <span> · </span>
+                <a href="mailto:leydi.martinezb@unisimon.edu.co">leydi.martinezb@unisimon.edu.co</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

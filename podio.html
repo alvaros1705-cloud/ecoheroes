@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Podio — ECO-HÉROES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagen 5. avatar.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="usb-brand">
+                <img src="imagen 2. logo usb.png" alt="Universidad Simón Bolívar" class="usb-logo">
+                <div class="brand-text">
+                    <h1>Universidad Simón Bolívar</h1>
+                    <p>Third School: ECO-HÉROES — Transformando Residuos</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="evento.html">Evento</a>
+                <a href="inscripcion.html">Inscripción</a>
+                <a href="puntajes.html">Puntajes</a>
+                <a href="podio.html" aria-current="page">Podio</a>
+                <a href="programas.html">Programas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2>Podio de ganadores</h2>
+                    <p>Conoce a los equipos destacados del evento.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-ghost" href="index.html">Volver a la Landing</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="imagen 5. avatar.png" alt="Avatar" class="poster"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="podio">
+            <div class="container section-header">
+                <h3>Podio de ganadores</h3>
+                <p>Se calcula automáticamente a partir de los puntajes.</p>
+                <button id="btnCalcularPodio" class="btn btn-primary vine">Calcular ganadores</button>
+            </div>
+            <div class="container podium">
+                <div class="podium-spot spot-2">
+                    <div class="place">2</div>
+                    <div class="team" id="ganador2">—</div>
+                </div>
+                <div class="podium-spot spot-1">
+                    <div class="place">1</div>
+                    <div class="team" id="ganador1">—</div>
+                </div>
+                <div class="podium-spot spot-3">
+                    <div class="place">3</div>
+                    <div class="team" id="ganador3">—</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="nav-steps">
+                <a id="btn-prev" class="btn btn-outline" href="puntajes.html">« Puntajes</a>
+                <a id="btn-next" class="btn btn-primary" href="programas.html">Siguiente: Programas »</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Universidad Simón Bolívar</strong>
+                <div>Third School: ECO-HÉROES — Transformando Residuos</div>
+            </div>
+            <div>
+                <span>Contacto: 3125508421</span>
+                <span> · </span>
+                <a href="mailto:leydi.martinezb@unisimon.edu.co">leydi.martinezb@unisimon.edu.co</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

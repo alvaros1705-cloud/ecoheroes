@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscripción — ECO-HÉROES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagen 5. avatar.png">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="usb-brand">
+                <img src="imagen 2. logo usb.png" alt="Universidad Simón Bolívar" class="usb-logo">
+                <div class="brand-text">
+                    <h1>Universidad Simón Bolívar</h1>
+                    <p>Third School: ECO-HÉROES — Transformando Residuos</p>
+                </div>
+            </div>
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="evento.html">Evento</a>
+                <a href="inscripcion.html" aria-current="page">Inscripción</a>
+                <a href="puntajes.html">Puntajes</a>
+                <a href="podio.html">Podio</a>
+                <a href="programas.html">Programas</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h2>Inscripción de equipos</h2>
+                    <p>Registra tu equipo para participar en ECO-HÉROES.</p>
+                    <div class="hero-cta">
+                        <a class="btn btn-ghost" href="index.html">Volver a la Landing</a>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="imagen 4.png" alt="Planeta" class="planet-hero"/>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="inscripcion">
+            <div class="container section-header insc-header">
+                <img src="imagen 4.png" alt="Planeta con ramas y mariposas" class="planet-insc"/>
+                <div class="insc-text">
+                    <h3>Inscripción de equipos</h3>
+                    <p>Registra tu equipo para participar en ECO-HÉROES.</p>
+                </div>
+            </div>
+            <div class="container grid-2">
+                <form id="formRegistro" class="card form" novalidate>
+                    <div class="form-row">
+                        <label for="equipo">Nombre del equipo *</label>
+                        <input id="equipo" name="equipo" type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="institucion">Institución (colegio/universidad) *</label>
+                        <input id="institucion" name="institucion" type="text" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="grado">Grado *</label>
+                        <select id="grado" name="grado" required>
+                            <option value="">Selecciona</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>SENA</option>
+                        </select>
+                    </div>
+                    <div class="form-row grid-2-inner">
+                        <div>
+                            <label for="contactoNombre">Nombre del Docente *</label>
+                            <input id="contactoNombre" name="contactoNombre" type="text" required>
+                        </div>
+                        <div>
+                            <label for="contactoTelefono">Celular *</label>
+                            <input id="contactoTelefono" name="contactoTelefono" type="tel" required pattern="[0-9]{7,12}">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="contactoEmail">E-mail Docente *</label>
+                        <input id="contactoEmail" name="contactoEmail" type="email" required>
+                    </div>
+                    <div class="form-actions">
+                        <div class="form-row" style="flex:1">
+                            <label class="consent">
+                                <input id="politicaDatos" type="checkbox" required>
+                                <span>Lo invitamos a conocer nuestra Política de Tratamiento de la Información Personal en <a href="https://www.unisimon.edu.co/showimagen/showpdf/universidad-simon-bolivar-97552.pdf" target="_blank" rel="noopener">este enlace</a>.</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary vine">Registrar equipo</button>
+                        <button type="button" id="btnLimpiar" class="btn btn-ghost">Limpiar</button>
+                    </div>
+                    <p class="form-hint">Los campos marcados con * son obligatorios.</p>
+                </form>
+                <form id="formParticipantes" class="card form" novalidate>
+                    <h4>Inscripción de participantes por equipo</h4>
+                    <div class="participant">
+                        <h5>Participante 1</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p1Nombre">Nombres y Apellidos</label>
+                                <input id="p1Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p1Cel">Celular</label>
+                                <input id="p1Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p1Mail">E-mail (opcional)</label>
+                            <input id="p1Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <h5>Participante 2</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p2Nombre">Nombres y Apellidos</label>
+                                <input id="p2Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p2Cel">Celular</label>
+                                <input id="p2Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p2Mail">E-mail (opcional)</label>
+                            <input id="p2Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <div class="participant">
+                        <h5>Participante 3</h5>
+                        <div class="form-row grid-2-inner">
+                            <div>
+                                <label for="p3Nombre">Nombres y Apellidos</label>
+                                <input id="p3Nombre" type="text" disabled>
+                            </div>
+                            <div>
+                                <label for="p3Cel">Celular</label>
+                                <input id="p3Cel" type="tel" pattern="[0-9]{7,12}" disabled>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="p3Mail">E-mail (opcional)</label>
+                            <input id="p3Mail" type="email" disabled>
+                        </div>
+                    </div>
+                    <p class="form-hint">Los campos de participantes se habilitarán al iniciar la inscripción del equipo.</p>
+                </form>
+            </div>
+            <div class="nav-steps">
+                <a id="btn-prev" class="btn btn-outline" href="evento.html">« Evento</a>
+                <a id="btn-next" class="btn btn-primary" href="puntajes.html">Siguiente: Puntajes »</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Universidad Simón Bolívar</strong>
+                <div>Third School: ECO-HÉROES — Transformando Residuos</div>
+            </div>
+            <div>
+                <span>Contacto: 3125508421</span>
+                <span> · </span>
+                <a href="mailto:leydi.martinezb@unisimon.edu.co">leydi.martinezb@unisimon.edu.co</a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
